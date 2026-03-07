@@ -7,6 +7,13 @@ AI workflow architecture projects exploring safe AI integration into operational
 
 This architecture separates AI agents from deterministic decision logic using a sanitation and validation safety layer.
 
+### Legend
+
+🟨 **AI Agents** — LLM-based workflow components  
+🟩 **Safety Layer** — input sanitation and structured data validation  
+🟦 **Deterministic Systems** — rule-based coverage decision logic  
+
+
 ```mermaid
 flowchart TD
 
