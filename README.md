@@ -16,12 +16,12 @@ B[AI Claim Intake Assistant]
 G[Coverage Explanation Assistant]
 end
 
-subgraph Data Safety
+subgraph Safety Layer
 C[Input Sanitation + Validation]
 D[Structured Claim Data]
 end
 
-subgraph Decision Logic
+subgraph Deterministic Decision Layer
 E[Coverage Decision Engine]
 F[Structured Decision Output]
 end
@@ -41,10 +41,17 @@ F --> G
 G --> H
 G --> I
 G --> J
+
+%% styling
+
+classDef ai fill:#ffe599,stroke:#333,stroke-width:2px
+classDef safety fill:#d9ead3,stroke:#333,stroke-width:2px
+classDef decision fill:#cfe2f3,stroke:#333,stroke-width:2px
+
+class B,G ai
+class C,D safety
+class E,F decision
 ```
-
----
-
 ## Projects
 
 ### AI Claim Intake Assistant
