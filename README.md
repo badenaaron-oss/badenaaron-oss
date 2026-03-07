@@ -4,6 +4,8 @@ AI workflow architecture projects exploring safe AI integration into operational
 
 ---
 
+This architecture separates AI agents from deterministic decision logic using a sanitation and validation safety layer.
+
 ## AI Insurance Workflow Architecture
 
 ```mermaid
