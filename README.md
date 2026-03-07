@@ -1,16 +1,54 @@
-## Hi there 👋
+# Aaron Baden
 
-<!--
-**badenaaron-oss/badenaaron-oss** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+AI workflow architecture projects exploring safe AI integration into operational systems.
 
-Here are some ideas to get you started:
+---
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+## AI Insurance Workflow Architecture
+
+```mermaid
+flowchart TD
+
+A[Policyholder Inquiry]
+
+subgraph AI Agents
+B[AI Claim Intake Assistant]
+G[Coverage Explanation Assistant]
+end
+
+subgraph Data Safety
+C[Input Sanitation + Validation]
+D[Structured Claim Data]
+end
+
+subgraph Decision Logic
+E[Coverage Decision Engine]
+F[Structured Decision Output]
+end
+
+subgraph Customer Communication
+H[PHONE_SCRIPT]
+I[EMAIL_RESPONSE]
+J[INTERNAL_SUMMARY]
+end
+
+A --> B
+B --> C
+C --> D
+D --> E
+E --> F
+F --> G
+G --> H
+G --> I
+G --> J
+```
+
+---
+
+## Projects
+
+### AI Claim Intake Assistant
+Collects claim information, sanitizes inputs, and produces structured claim data.
+
+### Coverage Explanation Assistant
+Transforms structured coverage decisions into compliant customer explanations.
