@@ -21,34 +21,36 @@ A[Policyholder Inquiry]
 
 subgraph AI Agents
 B[AI Claim Intake Assistant]
-G[Coverage Explanation Assistant]
+C[🚦 Claim Workflow Orchestrator]
+D[Coverage Explanation Assistant]
 end
 
 subgraph Safety Layer
-C[Input Sanitation + Validation]
-D[Structured Claim Data]
+E[Input Sanitation + Validation]
+F[Structured Claim Data]
 end
 
 subgraph Deterministic Decision Layer
-E[Coverage Decision Engine]
-F[Structured Decision Output]
+G[Coverage Decision Engine]
+H[Structured Decision Output]
 end
 
 subgraph Customer Communication
-H[PHONE_SCRIPT]
-I[EMAIL_RESPONSE]
-J[INTERNAL_SUMMARY]
+I[PHONE_SCRIPT]
+J[EMAIL_RESPONSE]
+K[INTERNAL_SUMMARY]
 end
 
 A --> B
-B --> C
-C --> D
-D --> E
+B --> E
 E --> F
-F --> G
+F --> C
+C --> G
 G --> H
-G --> I
-G --> J
+H --> D
+D --> I
+D --> J
+D --> K
 
 %% styling
 
@@ -56,9 +58,9 @@ classDef ai fill:#ffe599,stroke:#333,stroke-width:2px
 classDef safety fill:#d9ead3,stroke:#333,stroke-width:2px
 classDef decision fill:#cfe2f3,stroke:#333,stroke-width:2px
 
-class B,G ai
-class C,D safety
-class E,F decision
+class B,C,D ai
+class E,F safety
+class G,H decision
 ```
 ## Projects
 
