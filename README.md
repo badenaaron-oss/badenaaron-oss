@@ -21,13 +21,13 @@ A[Policyholder Inquiry]
 
 subgraph AI Agents
 B[AI Claim Intake Assistant]
-C[🚦 Claim Workflow Orchestrator]
-D[Coverage Explanation Assistant]
+E[🚦 Claim Workflow Orchestrator]
+F[Coverage Explanation Assistant]
 end
 
 subgraph Safety Layer
-E[Input Sanitation + Validation]
-F[Structured Claim Data]
+C[Input Sanitation + Validation]
+D[Structured Claim Data]
 end
 
 subgraph Deterministic Decision Layer
@@ -41,25 +41,32 @@ J[EMAIL_RESPONSE]
 K[INTERNAL_SUMMARY]
 end
 
-A --> B
-B --> E
-E --> F
-F --> C
-C --> G
-G --> H
-H --> D
-D --> I
-D --> J
-D --> K
+A -->|claim description| B
+B -->|raw intake data| C
+C -->|validated claim data| D
+D -->|claim state| E
+
+E -->|decision request| G
+G -->|coverage decision| H
+
+H -->|decision status + confidence| E
+
+E -->|communication request| F
+
+F -->|customer explanation| I
+F -->|customer explanation| J
+F -->|internal summary| K
 
 %% styling
 
 classDef ai fill:#ffe599,stroke:#333,stroke-width:2px
+classDef orchestrator fill:#f6b26b,stroke:#333,stroke-width:4px
 classDef safety fill:#d9ead3,stroke:#333,stroke-width:2px
 classDef decision fill:#cfe2f3,stroke:#333,stroke-width:2px
 
-class B,C,D ai
-class E,F safety
+class B,F ai
+class E orchestrator
+class C,D safety
 class G,H decision
 ```
 ## Projects
