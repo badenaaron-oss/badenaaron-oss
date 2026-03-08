@@ -67,5 +67,8 @@ class G,H decision
 ### AI Claim Intake Assistant
 Collects claim information, sanitizes inputs, and produces structured claim data.
 
+### AI Claim Workflow Orchestrator
+Routs insurance claim cases through intake, validation, decision, and communication systems.
+
 ### Coverage Explanation Assistant
 Transforms structured coverage decisions into compliant customer explanations.
